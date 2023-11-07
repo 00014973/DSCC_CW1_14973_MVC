@@ -17,9 +17,14 @@ namespace DSCC_CW1_14973_MVC.Controllers
             _configuration = configuration;
         }
 
+
+        // setting base url to fetch data from aws api link
+
         string BaseUrl = "http://ec2-13-49-225-142.eu-north-1.compute.amazonaws.com/";
 
         // GET: BookController
+
+        // getting all the books with async
         public async Task<ActionResult> Index()
         {
             List<Book> BookInfo = new List<Book>();
